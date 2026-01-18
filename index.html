@@ -4,77 +4,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BOS | Barisan Ojol Selatan</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: radial-gradient(circle at top, #1b3a1b, #000000 70%);
-      color: #ffffff;
-      text-align: center;
-    }.container {
-  max-width: 420px;
+    * { box-sizing: border-box; }body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #000000, #0b1f0b, #000000);
+  color: #ffffff;
+  text-align: center;
+}
+
+.container {
+  max-width: 430px;
   margin: auto;
-  padding: 30px 20px 60px;
+  padding: 30px 18px 80px;
+}
+
+.logo-wrap {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.logo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: -15px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,255,0,0.25), transparent 70%);
+  z-index: -1;
+  filter: blur(8px);
 }
 
 .logo {
-  width: 180px;
-  margin: 20px auto;
+  width: 150px;
+  max-width: 60%;
+  height: auto;
 }
 
 h1 {
-  margin: 10px 0 5px;
-  font-size: 28px;
-  color: #6bff6b;
-  letter-spacing: 1px;
+  margin: 10px 0 4px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #7dff7d;
 }
 
 .tagline {
   font-size: 14px;
-  color: #cfcfcf;
-  margin-bottom: 25px;
+  color: #bfbfbf;
+  margin-bottom: 28px;
+}
+
+.section {
+  margin-bottom: 26px;
 }
 
 .card {
-  background: linear-gradient(145deg, #0f1f0f, #050505);
+  background: linear-gradient(160deg, #0e2a0e, #040404);
   border: 1px solid #1f4f1f;
-  border-radius: 14px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.15);
+  border-radius: 18px;
+  padding: 22px 18px;
+  box-shadow: 0 10px 30px rgba(0,255,0,0.15);
 }
 
 .card h2 {
-  margin-top: 0;
+  margin: 0 0 10px;
   font-size: 18px;
   color: #7dff7d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .card p {
   font-size: 14px;
   line-height: 1.6;
-  color: #dddddd;
+  color: #e0e0e0;
 }
 
 .btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   width: 100%;
-  padding: 14px 0;
-  margin-top: 12px;
+  padding: 15px 0;
+  margin-top: 14px;
   background: linear-gradient(90deg, #1f8f1f, #4dff4d);
   color: #000000;
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 10px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  font-weight: 700;
+  border-radius: 14px;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 12px rgba(77, 255, 77, 0.7);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 0 18px rgba(77,255,77,0.8);
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.stat {
+  flex: 1;
+  background: linear-gradient(160deg, #0b220b, #020202);
+  border: 1px solid #1f4f1f;
+  border-radius: 14px;
+  padding: 14px 8px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 18px;
+  color: #6bff6b;
+}
+
+.stat span {
+  font-size: 12px;
+  color: #cfcfcf;
 }
 
 .footer {
-  margin-top: 40px;
+  margin-top: 50px;
   font-size: 12px;
   color: #aaaaaa;
 }
@@ -86,48 +138,50 @@ h1 {
   </style>
 </head>
 <body>
-  <div class="container"><!-- GANTI src LOGO SESUAI FILE DI GITHUB -->
-<img src="logo-bos.png" alt="Logo BOS" class="logo" />
+  <div class="container"><div class="logo-wrap">
+  <img src="logo-bos.png" alt="Logo BOS" class="logo" />
+</div>
 
 <h1>BOS</h1>
 <div class="tagline">Barisan Ojol Selatan • Since 2025</div>
 
-<div class="card">
+<div class="section card">
   <h2>Tentang BOS</h2>
   <p>
-    BOS adalah komunitas ojek online wilayah selatan yang menjunjung
-    solidaritas, kebersamaan, dan saling bantu di jalan.
+    Komunitas driver ojek online wilayah selatan. Tempat berbagi info,
+    solidaritas di jalan, dan tumbuh bareng sebagai keluarga aspal.
   </p>
+  <div class="stats">
+    <div class="stat"><strong>2025</strong><span>Berdiri</span></div>
+    <div class="stat"><strong>Ojol</strong><span>Solid</span></div>
+    <div class="stat"><strong>Selatan</strong><span>Wilayah</span></div>
+  </div>
 </div>
 
-<div class="card">
+<div class="section card">
   <h2>Gabung Komunitas</h2>
-  <a href="#" class="btn">Grup WhatsApp BOS</a>
-  <a href="#" class="btn">Telegram BOS</a>
+  <a href="#" class="btn">💬 Grup WhatsApp BOS</a>
+  <a href="#" class="btn">🚀 Telegram BOS</a>
 </div>
 
-<div class="card">
+<div class="section card">
   <h2>Media Sosial Resmi</h2>
-  <a href="#" class="btn">Instagram BOS</a>
-  <a href="#" class="btn">TikTok BOS</a>
+  <a href="#" class="btn">📸 Instagram BOS</a>
+  <a href="#" class="btn">🎥 TikTok BOS</a>
 </div>
 
-<div class="card">
+<div class="section card">
   <h2>Kegiatan BOS</h2>
   <p>
-    • Kopdar & silaturahmi<br />
-    • Berbagi info zona & order<br />
-    • Edukasi driver<br />
-    • Solidaritas sesama ojol
+    Kopdar • Info zona & order • Edukasi driver • Solidaritas sesama ojol
   </p>
 </div>
 
-<div class="card">
+<div class="section card">
   <h2>Kontak Admin</h2>
   <p>
-    Admin BOS 1<br />
-    Admin BOS 2<br />
-    <small>(Join komunitas & kerja sama)</small>
+    Admin BOS<br />
+    <small>Join komunitas & kerja sama</small>
   </p>
 </div>
 
