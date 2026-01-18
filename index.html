@@ -1,220 +1,191 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BOS | Barisan Ojol Selatan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barisan Ojol Selatan (BOS)</title>
+
   <style>
-    * { box-sizing: border-box; }body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(180deg, #000000, #0b1f0b, #000000);
-  color: #ffffff;
-  text-align: center;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+    }
 
-.container {
-  max-width: 430px;
-  margin: auto;
-  padding: 30px 18px 80px;
-}
+    header {
+      padding: 45px 20px;
+    }
 
-.logo-wrap {
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
+    header img {
+      width: 140px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 0 10px rgba(0,255,180,.6));
+    }
 
-.logo-wrap::after {
-  content: '';
-  position: absolute;
-  inset: -15px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,255,0,0.25), transparent 70%);
-  z-index: -1;
-  filter: blur(8px);
-}
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 28px;
+    }
 
-.logo {
-  width: 150px;
-  max-width: 60%;
-  height: auto;
-}
+    .tagline {
+      font-size: 14px;
+      opacity: 0.9;
+    }
 
-h1 {
-  margin: 10px 0 4px;
-  font-size: 30px;
-  letter-spacing: 2px;
-  color: #7dff7d;
-}
+    section {
+      padding: 35px 20px;
+    }
 
-.tagline {
-  font-size: 14px;
-  color: #bfbfbf;
-  margin-bottom: 28px;
-}
+    .card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 25px;
+      margin: 15px auto;
+      max-width: 420px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    }
 
-.section {
-  margin-bottom: 26px;
-}
+    .card h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
 
-.card {
-  background: linear-gradient(160deg, #0e2a0e, #040404);
-  border: 1px solid #1f4f1f;
-  border-radius: 18px;
-  padding: 22px 18px;
-  box-shadow: 0 10px 30px rgba(0,255,0,0.15);
-}
+    .card p, .card li {
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
 
-.card h2 {
-  margin: 0 0 10px;
-  font-size: 18px;
-  color: #7dff7d;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+    ul {
+      padding-left: 18px;
+      text-align: left;
+    }
 
-.card p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #e0e0e0;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 28px;
+      background: #00ffae;
+      color: #003b2f;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(0,255,174,.6);
+      transition: 0.3s ease;
+    }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 15px 0;
-  margin-top: 14px;
-  background: linear-gradient(90deg, #1f8f1f, #4dff4d);
-  color: #000000;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 14px;
-  transition: all 0.2s ease;
-}
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,255,174,.9);
+    }
 
-.btn:hover {
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 0 18px rgba(77,255,77,0.8);
-}
+    .sosmed a {
+      display: block;
+      margin: 10px 0;
+      color: #00ffae;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.stats {
-  display: flex;
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.stat {
-  flex: 1;
-  background: linear-gradient(160deg, #0b220b, #020202);
-  border: 1px solid #1f4f1f;
-  border-radius: 14px;
-  padding: 14px 8px;
-}
-
-.stat strong {
-  display: block;
-  font-size: 18px;
-  color: #6bff6b;
-}
-
-.stat span {
-  font-size: 12px;
-  color: #cfcfcf;
-}
-
-.footer {
-  margin-top: 50px;
-  font-size: 12px;
-  color: #aaaaaa;
-}
-
-.footer span {
-  color: #6bff6b;
-}
-
+    footer {
+      padding: 25px 15px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
   </style>
 </head>
+
 <body>
-  <div class="container"><div class="logo-wrap">
-  <img src="logo-bos.png" alt="Logo BOS" class="logo" />
-</div>
 
-<h1>BOS</h1>
-<div class="tagline">Barisan Ojol Selatan • Since 2025</div>
+<!-- HEADER -->
+<header>
+  <img src="logo-bos.png" alt="Logo BOS">
+  <h1>Barisan Ojol Selatan</h1>
+  <p class="tagline">Solidaritas • Satu Jalur • Satu Rasa</p>
+</header>
 
-<div class="section card">
-  <h2>Tentang BOS</h2>
-  <p>
-    Komunitas driver ojek online wilayah selatan. Tempat berbagi info,
-    solidaritas di jalan, dan tumbuh bareng sebagai keluarga aspal.
-  </p>
-  <div class="stats">
-    <div class="stat"><strong>2025</strong><span>Berdiri</span></div>
-    <div class="stat"><strong>Ojol</strong><span>Solid</span></div>
-    <div class="stat"><strong>Selatan</strong><span>Wilayah</span></div>
+<!-- TENTANG -->
+<section>
+  <div class="card">
+    <h2>Tentang BOS</h2>
+    <p>
+      Barisan Ojol Selatan (BOS) adalah komunitas pengemudi ojek online
+      wilayah selatan yang berdiri atas dasar solidaritas,
+      kebersamaan, dan saling bantu antar driver.
+    </p>
   </div>
-</div>
+</section>
 
-<div class="section card">
-  <h2>Pendaftaran Anggota BOS</h2>
-  <p>Isi data di bawah ini untuk bergabung dengan komunitas Barisan Ojol Selatan.</p>
-  <form action="https://formspree.io/f/xxxxxxx" method="POST" style="text-align:left; margin-top:15px;">
-    <label>Nama Lengkap</label><br />
-    <input type="text" name="nama" required style="width:100%; padding:12px; margin:6px 0 12px; border-radius:10px; border:none;" />
-
-    <label>Nama Panggilan</label><br />
-    <input type="text" name="panggilan" required style="width:100%; padding:12px; margin:6px 0 12px; border-radius:10px; border:none;" />
-
-    <label>No WhatsApp</label><br />
-    <input type="tel" name="whatsapp" required style="width:100%; padding:12px; margin:6px 0 12px; border-radius:10px; border:none;" />
-
-    <label>Aplikasi Ojol</label><br />
-    <select name="ojol" required style="width:100%; padding:12px; margin:6px 0 12px; border-radius:10px; border:none;">
-      <option value="">-- Pilih --</option>
-      <option>Gojek</option>
-      <option>Grab</option>
-      <option>Maxim</option>
-      <option>inDrive</option>
-      <option>Lainnya</option>
-    </select>
-
-    <label>Wilayah Narik</label><br />
-    <input type="text" name="wilayah" required style="width:100%; padding:12px; margin:6px 0 16px; border-radius:10px; border:none;" />
-
-    <button type="submit" class="btn">📝 Daftar Sekarang</button>
-  </form>
-  <p style="font-size:12px; margin-top:12px; color:#bfbfbf;">Admin BOS akan menghubungi setelah data diverifikasi.</p>
-</div>
-
-<div class="section card">
-  <h2>Media Sosial Resmi</h2>
-  <a href="#" class="btn">📸 Instagram BOS</a>
-  <a href="#" class="btn">🎥 TikTok BOS</a>
-</div>
-
-<div class="section card">
-  <h2>Kegiatan BOS</h2>
-  <p>
-    Kopdar • Info zona & order • Edukasi driver • Solidaritas sesama ojol
-  </p>
-</div>
-
-<div class="section card">
-  <h2>Kontak Admin</h2>
-  <p>
-    Admin BOS<br />
-    <small>Join komunitas & kerja sama</small>
-  </p>
-</div>
-
-<div class="footer">
-  <p>© 2025 <span>BOS - Barisan Ojol Selatan</span></p>
-  <p>Satu Aspal • Satu Solidaritas</p>
-</div>
-
+<!-- KEGIATAN -->
+<section>
+  <div class="card">
+    <h2>Kegiatan BOS</h2>
+    <ul>
+      <li>Kopdar rutin & silaturahmi driver</li>
+      <li>Diskusi dan sharing seputar ojol</li>
+      <li>Bantuan sesama driver (darurat / musibah)</li>
+      <li>Solidaritas & aksi sosial</li>
+      <li>Informasi orderan & wilayah rawan</li>
+    </ul>
   </div>
+</section>
+
+<!-- GABUNG -->
+<section>
+  <div class="card">
+    <h2>Gabung Komunitas</h2>
+    <p>
+      Daftar sebagai anggota BOS melalui form resmi.
+      Data akan diverifikasi oleh admin.
+    </p>
+    <a href="https://forms.gle/mWhSTyRa5k2LN1cEA"
+       target="_blank"
+       class="btn">
+       📝 Daftar Anggota BOS
+    </a>
+  </div>
+</section>
+
+<!-- SOSIAL MEDIA -->
+<section>
+  <div class="card">
+    <h2>Media Sosial BOS</h2>
+    <div class="sosmed">
+      <a href="#" target="_blank">📸 Instagram : @barisanojolselatan</a>
+      <a href="#" target="_blank">🎵 TikTok : @barisanojolselatan</a>
+      <a href="#" target="_blank">📘 Facebook : Barisan Ojol Selatan</a>
+    </div>
+    <p style="font-size:12px;opacity:.7">
+      (Silakan ganti link sesuai akun resmi BOS)
+    </p>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section>
+  <div class="card">
+    <h2>Kontak Admin</h2>
+    <p>
+      Untuk pertanyaan, kerja sama, atau konfirmasi pendaftaran:
+    </p>
+    <a href="https://wa.me/628XXXXXXXXXX"
+       target="_blank"
+       class="btn">
+       💬 Chat Admin BOS
+    </a>
+    <p style="font-size:12px;opacity:.7;margin-top:10px">
+      Ganti nomor WA admin di kode HTML
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Barisan Ojol Selatan (BOS)<br>
+  Komunitas Ojol Independen • Bersatu Kita Kuat
+</footer>
+
 </body>
 </html>
